@@ -1,38 +1,50 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import { Routes, Route } from "react-router-dom";
+import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
+// import Header from "./components/Header";
+// import Navbar from "./components/Navbar";
+import defaultTheme from "@chakra-ui/theme";
+import { RecoilRoot } from "recoil";
+import Main from "./components/Main";
+// import Footer from "./components/Footer";
+
+export const theme = extendBaseTheme({
+  // fonts: {
+  //   heading: `'Manrope', sans-serif`,
+  //   body: `'Unbounded', sans-serif`,
+  //   size: "14px",
+  // },
+
+  components: {
+    Modal: defaultTheme.components.Modal,
+    Select: defaultTheme.components.Select,
+    Menu: defaultTheme.components.Menu,
+    Alert: defaultTheme.components.Alert,
+  },
+});
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
+  <>
+  <RecoilRoot>
+    <ChakraBaseProvider theme={theme}>
+      <Main/> 
+
+
+      
+      {/* <Header />
+      <Navbar /> */}
+      {/* <Routes>
+        <Route path="/main" element={<Main />} />
+        <Route path="/metro" element={<MM2010 />} />
+        <Route path="/groundtransport" element={<NT2010 />} />
+        <Route path="/suburbanrailway" element={<PGD2010 />} />
+        <Route path="/roads" element={<DD2010 />} />
+        <Route path="/sharing" element={<SHS2010 />} />
+        <Route path="/taxi" element={<TAXI2010 />} />
+        <Route path="/station" element={<AV2010 />} />
+        <Route path="*" element={<Main />} />
+      </Routes> */}
+      {/* <Footer /> */}
+    </ChakraBaseProvider>
+  </RecoilRoot>
+</>
 )
