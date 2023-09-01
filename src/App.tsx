@@ -8,17 +8,18 @@ import Main from "./components/Main";
 // import Footer from "./components/Footer";
 
 export const theme = extendBaseTheme({
-  // fonts: {
-  //   heading: `'Manrope', sans-serif`,
-  //   body: `'Unbounded', sans-serif`,
-  //   size: "14px",
-  // },
+  fonts: {
+    heading: `'Moscow Sans,Arial,sans-serif`,
+    body: `'Unbounded', sans-serif`,
+    size: "17px",
+  },
 
   components: {
     Modal: defaultTheme.components.Modal,
     Select: defaultTheme.components.Select,
     Menu: defaultTheme.components.Menu,
     Alert: defaultTheme.components.Alert,
+    Input: defaultTheme.components.Input,
   },
 });
 
