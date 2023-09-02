@@ -25,15 +25,12 @@ export const theme = extendBaseTheme({
 
 export const App = () => (
   <>
-  <RecoilRoot>
-    <ChakraBaseProvider theme={theme}>
-      <Main/> 
-
-
-      
-      {/* <Header />
+    <RecoilRoot>
+      <ChakraBaseProvider theme={theme}>
+        <Main />
+        {/* <Header />
       <Navbar /> */}
-      {/* <Routes>
+        {/* <Routes>
         <Route path="/main" element={<Main />} />
         <Route path="/metro" element={<MM2010 />} />
         <Route path="/groundtransport" element={<NT2010 />} />
@@ -44,8 +41,8 @@ export const App = () => (
         <Route path="/station" element={<AV2010 />} />
         <Route path="*" element={<Main />} />
       </Routes> */}
-      {/* <Footer /> */}
-    </ChakraBaseProvider>
-  </RecoilRoot>
-</>
-)
+        {/* <Footer /> */}
+      </ChakraBaseProvider>
+    </RecoilRoot>
+  </>
+);
