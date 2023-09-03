@@ -20,6 +20,8 @@ export const theme = extendBaseTheme({
     Menu: defaultTheme.components.Menu,
     Alert: defaultTheme.components.Alert,
     Input: defaultTheme.components.Input,
+    Form: defaultTheme.components.Form,
+    Radio: defaultTheme.components.Radio,
   },
 });
 
