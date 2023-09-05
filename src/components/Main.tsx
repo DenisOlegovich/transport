@@ -780,6 +780,7 @@ function Main() {
             fontSize="20px"
             wordBreak="break-word"
             cursor="pointer"
+            mb="24px"
             _hover={{
               boxShadow: "0 4px 10px rgba(0,0,0,.05)",
               transition: "box-shadow .15s linear 0s",

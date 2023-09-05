@@ -176,19 +176,18 @@ function Questions(props: any) {
     <Box>
       <Text fontSize="33px">Частые вопросы</Text>
       {questions.map((question) => (
-        <Accordion allowMultiple>
+        <Accordion allowMultiple mb="0.8rem">
           <AccordionItem>
             <AccordionButton>
-              <Text
+              <Box
+                as="a"
                 fontSize="22px"
-                lineHeight="3rem"
                 textAlign="left"
-                textDecoration="underline"
-                textDecorationStyle="dotted"
                 fontWeight="700"
+                borderBottom="1px dotted rgba(0,0,0,.3)"
               >
                 {question.title}
-              </Text>
+              </Box>
             </AccordionButton>
 
             <AccordionPanel
