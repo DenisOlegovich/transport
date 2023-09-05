@@ -22,6 +22,7 @@ import {
   InputLeftAddon,
   useRadioGroup,
 } from "@chakra-ui/react";
+import Questions from "./Questions";
 import MainPic from "./Images/MainPic.svg";
 import MaxLiksutov from "./Images/MaxLiksutov.jpg";
 import MobileParking from "./Images/MobileParking.png";
@@ -125,12 +126,20 @@ function Main() {
         >
           <GridItem
             pl="2"
-            bg="white"
             area={"routes"}
             borderRadius="0.8rem"
             transition="box-shadow .15s linear 0s"
+            position="relative"
+            backgroundImage={Route}
+            backgroundPosition="center bottom 20rem"
+            backgroundSize="50rem"
           >
-            <Box p="1.8rem 2rem">
+            <Box
+              p="1.8rem 2rem"
+              bg="white"
+              borderBottomRadius="50%"
+              roundedBottom="true"
+            >
               <Link
                 href="https://transport.mos.ru/mostrans/build_route"
                 _before={{
@@ -215,12 +224,7 @@ function Main() {
               >
                 Построить маршрут
               </Button>
-              <Image
-                src={Route}
-                backgroundSize="cover"
-                backgroundRepeat="no-repeat"
-                backgroundPosition="center bottom"
-              />
+
               {/* <FormControl as="fieldset">
                 <FormLabel as="legend">Favorite Naruto Character</FormLabel>
                 <RadioGroup defaultValue="Itachi">
@@ -236,6 +240,12 @@ function Main() {
                 <FormHelperText>Select only if you're a fan.</FormHelperText>
               </FormControl> */}
             </Box>
+            {/* <Image
+              src={Route}
+              position="absolute"
+              bottom="0px"
+              objectFit="cover"
+            /> */}
           </GridItem>
           <GridItem
             pl="2"
@@ -290,20 +300,15 @@ function Main() {
                   <Text fontSize="12px" color="#666f78">
                     {item.date}
                   </Text>
-                  <Box
-                    display="-webkit-box"
+                  <Text
                     fontSize="16px"
                     lineHeight="1.2em"
                     fontWeight="500"
                     maxH="60px"
-                    overflow="hidden"
-                    textOverflow="ellipsis"
-                    wordBreak="break-word"
+                    noOfLines={3}
                   >
                     <Link
                       borderBottom="1px solid rgba(0,0,0,.2);"
-                      textOverflow="ellipsis"
-                      wordBreak="break-word"
                       href=""
                       _hover={{
                         borderBottom: "1px solid rgba(0,0,0,.5);",
@@ -311,7 +316,7 @@ function Main() {
                     >
                       {item.description}
                     </Link>
-                  </Box>
+                  </Text>
                 </Text>
               </Box>
             ))}
@@ -920,6 +925,7 @@ function Main() {
             />
           </GridItem>
         </Grid>
+        <Questions />
       </Box>
     </Container>
   );
