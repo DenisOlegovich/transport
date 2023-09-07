@@ -6,6 +6,7 @@ import {
   AccordionPanel,
   AccordionIcon,
   Text,
+  Link,
 } from "@chakra-ui/react";
 
 function Questions(props: any) {
@@ -174,7 +175,12 @@ function Questions(props: any) {
   ];
   return (
     <Box>
-      <Text fontSize="33px">Частые вопросы</Text>
+      <Box mb="15px">
+        <Link fontSize="33px" borderBottom="1px dotted rgba(0,0,0,.3)">
+          Частые вопросы
+        </Link>
+      </Box>
+
       {questions.map((question) => (
         <Accordion allowMultiple mb="0.8rem">
           <AccordionItem>

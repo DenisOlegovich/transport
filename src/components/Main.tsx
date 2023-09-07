@@ -23,6 +23,7 @@ import {
   useRadioGroup,
 } from "@chakra-ui/react";
 import Questions from "./Questions";
+import Card from "./Card";
 import MainPic from "./Images/MainPic.svg";
 import MaxLiksutov from "./Images/MaxLiksutov.jpg";
 import MobileParking from "./Images/MobileParking.png";
@@ -159,19 +160,21 @@ function Main() {
                   <InputLeftAddon
                     children="А"
                     bg="white"
-                    borderRight="none"
                     w="25px"
                     fontSize="14px"
                     textAlign="center"
                     color="#d10f1a"
                     p="6px"
                     borderTopLeftRadius="0.5rem"
+                    border="1px solid #ebebeb"
+                    borderRight="none"
                   />
                   <Input
                     type="text"
                     placeholder="откуда"
                     pl="10px"
                     borderTopRightRadius="0.5rem"
+                    border="1px solid #ebebeb"
                     borderLeft="none"
                   />
                 </InputGroup>
@@ -180,19 +183,22 @@ function Main() {
                   <InputLeftAddon
                     children="Б"
                     bg="white"
-                    borderRight="none"
                     w="25px"
                     fontSize="14px"
                     textAlign="center"
                     color="#2f80ed"
                     p="6px"
                     borderBottomLeftRadius="0.5rem"
+                    border="1px solid #ebebeb"
+                    borderRight="none"
+                    _active={{ border: "1px solid #ebebeb" }}
                   />
                   <Input
                     type="text"
                     placeholder="куда"
                     pl="10px"
                     borderBottomRightRadius="0.5rem"
+                    border="1px solid #ebebeb"
                     borderLeft="none"
                   />
                 </InputGroup>
@@ -247,21 +253,8 @@ function Main() {
               objectFit="cover"
             /> */}
           </GridItem>
-          <GridItem
-            pl="2"
-            bg="#a2a9b1"
-            p="18px 20px"
-            borderRadius="0.8rem"
-            color="white"
-            area={"pay"}
-            position="relative"
-            cursor="pointer"
-            _hover={{
-              boxShadow: "0 4px 10px rgba(0,0,0,.05)",
-              transition: "box-shadow .15s linear 0s",
-            }}
-          >
-            <Box bg="#a2a9b1" w="60%">
+          <GridItem area={"pay"}>
+            {/* <Box bg="#a2a9b1" w="60%">
               <Text fontSize="17px">Оплата проезда</Text>
               <Text fontSize="16px">
                 Все что нужно знать о ценах и способах оплаты
@@ -273,8 +266,23 @@ function Main() {
               h="calc(100% + 12px)!important;"
               bottom="0px"
               right="0px"
-            />
+            /> */}
+            <Card
+              text="Оплата проезда"
+              description="Все что нужно знать о ценах и способах оплаты"
+              bg="#a2a9b1"
+              color="white"
+            >
+              <Image
+                src={Validaor}
+                position="absolute"
+                h="calc(100% + 12px)!important;"
+                bottom="0px"
+                right="0px"
+              />
+            </Card>
           </GridItem>
+
           <GridItem
             pl="2"
             bg="white"
@@ -339,7 +347,7 @@ function Main() {
             borderRadius="0.8rem"
             p="18px 20px 0px"
             color="white"
-            fontSize="20px"
+            fontSize="17px"
             minW="170px"
             cursor="pointer"
             _hover={{
@@ -354,7 +362,7 @@ function Main() {
               backgroundRepeat="no-repeat"
               backgroundPosition="right bottom"
             >
-              Колонка Максима Ликсутова
+              Колонка Максима <br /> Ликсутова
             </Box>
             {/* <Image
               src={MaxLiksutov}
