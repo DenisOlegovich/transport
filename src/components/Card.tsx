@@ -26,6 +26,7 @@ function Card(props: any) {
         boxShadow: "0 4px 10px rgba(0,0,0,.05)",
         transition: "box-shadow .15s linear 0s",
       }}>
+        
       <Box maxW='50%'>
         <Text fontSize='17px' fontWeight='700'>
           {props.text}
