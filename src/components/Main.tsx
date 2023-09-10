@@ -893,13 +893,13 @@ function Main() {
                 </Text>
               </Box>
 
-              {/* <Image
-              src={Bear}
-              position="absolute"
-              h="calc(100% + 1rem)"
-              bottom="0px"
-              right="0rem"
-            /> */}
+              <Image
+                src={Bear}
+                position="absolute"
+                h="calc(100% + 1rem)"
+                bottom="0px"
+                right="0rem"
+              />
               <Box
                 backgroundImage={Controller}
                 backgroundPosition="right top"
