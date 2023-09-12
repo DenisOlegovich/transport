@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/transport/static/js/main.278bdde1.js",
+    "main.js": "/transport/static/js/main.dea5f2af.js",
     "static/js/787.d871f8c6.chunk.js": "/transport/static/js/787.d871f8c6.chunk.js",
     "static/media/Probki.jpg": "/transport/static/media/Probki.b254158137a0dbc344ad.jpg",
     "static/media/CargoMap.jpg": "/transport/static/media/CargoMap.95668329547d66bfb5c7.jpg",
@@ -9,6 +9,7 @@
     "static/media/Validator.png": "/transport/static/media/Validator.d6eee4d2c85bc3c9d705.png",
     "static/media/Electrobus.jpg": "/transport/static/media/Electrobus.35a281b83096ee7d05a3.jpg",
     "static/media/AppsIllustration.png": "/transport/static/media/AppsIllustration.6a609796c2f74f1a2903.png",
+    "static/media/Route.png": "/transport/static/media/Route.6bde3a136189e50abbe7.png",
     "static/media/ElectroAvtoMap.png": "/transport/static/media/ElectroAvtoMap.f706431244ce22fbc25b.png",
     "static/media/Troika.png": "/transport/static/media/Troika.a663933358dabd71819f.png",
     "static/media/Controller.png": "/transport/static/media/Controller.49db23ce75a040b9f739.png",
@@ -22,10 +23,10 @@
     "static/media/CoddLogo.svg": "/transport/static/media/CoddLogo.3897f6061000849cc92e908676fa5233.svg",
     "index.html": "/transport/index.html",
     "static/media/MetroLogo.svg": "/transport/static/media/MetroLogo.82776b0ec630030ba04bd67aa3ba0d1d.svg",
-    "main.278bdde1.js.map": "/transport/static/js/main.278bdde1.js.map",
+    "main.dea5f2af.js.map": "/transport/static/js/main.dea5f2af.js.map",
     "787.d871f8c6.chunk.js.map": "/transport/static/js/787.d871f8c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.278bdde1.js"
+    "static/js/main.dea5f2af.js"
   ]
 }
