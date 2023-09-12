@@ -46,9 +46,10 @@ import Validator from "./Images/Validator.png";
 import RadioCard from "./RadioCard";
 import Route from "./Images/Route.png";
 import Rounding from "./Rounding";
+import Questions from "./Questions";
 
 function Main() {
-  const [isSmallerThan992] = useMediaQuery("(max-width: 992px)");
+  const [isSmallerThan1250] = useMediaQuery("(max-width: 1250px)");
   const options = ["Т", "А", "П", "В"];
 
   const { getRootProps, getRadioProps } = useRadioGroup({
@@ -83,8 +84,9 @@ function Main() {
       fontFamily='Moscow Sans,Arial,sans-serif'
       fontSize='17px'
       fontWeight='600'
+      lineHeight='1.2'
       h='100%'>
-      <Box maxW='1630px' p='30px 10px' m='0 auto'>
+      <Box maxW='1630px' p={{ md: "30px 40px", base: "30px 10px" }} m='0 auto'>
         <Grid
           templateAreas={{
             lg: `"routes pay pay news"
@@ -220,10 +222,11 @@ function Main() {
               <Button
                 bg='#da2032'
                 w='100%'
-                p='5px 30px'
+                p='14px 30px 16px'
                 borderRadius='0.8rem'
                 color='white'
-                fontSize='16px'>
+                fontSize='17px'
+                fontWeight='700'>
                 Построить маршрут
               </Button>
 
@@ -315,7 +318,7 @@ function Main() {
             p='18px 20px 0px'
             color='white'
             fontSize='17px'
-            minW='230px'
+            minW='170px'
             cursor='pointer'
             _hover={{
               boxShadow: "0 4px 10px rgba(0,0,0,.05)",
@@ -329,12 +332,13 @@ function Main() {
               backgroundPosition='right bottom'>
               Колонка Максима <br /> Ликсутова
             </Box>
+
             {/* <Image
               src={MaxLiksutov}
-              position="absolute"
-              h="80%"
-              bottom="0px"
-              right="0px"
+              position='absolute'
+              h='80%'
+              bottom='0px'
+              right='0px'
             /> */}
           </GridItem>
           <GridItem
@@ -345,7 +349,7 @@ function Main() {
             area={"record"}
             borderRadius='0.8rem'
             fontSize='17px'
-            minW='230px'
+            minW='170px'
             cursor='pointer'
             _hover={{
               boxShadow: "0 4px 10px rgba(0,0,0,.05)",
@@ -534,8 +538,14 @@ function Main() {
             borderRadius='0.8rem'
             color='white'
             backgroundImage={Electrobus}
-            backgroundSize='100%!important'
-            backgroundPosition='center'
+            backgroundSize='contain'
+            backgroundPosition={{
+              xl: "center bottom -2rem",
+              lg: "center",
+              md: "center bottom",
+              sm: "center bottom",
+              base: "center bottom -2rem",
+            }}
             backgroundRepeat='no-repeat'
             area={"schedule"}
             cursor='pointer'
@@ -629,7 +639,6 @@ function Main() {
           fontWeight='bold'
           mb='24px'>
           <GridItem
-            pl='2'
             borderRadius='0.8rem'
             area={"mapTruck"}
             backgroundImage={CargoMap}
@@ -660,15 +669,25 @@ function Main() {
             </Box>
           </GridItem>
           <GridItem
-            pl='2'
             bg='#171f34'
             p='18px 20px'
             borderRadius='0.8rem'
             color='white'
             position='relative'
-            fontSize='17px'
+            minW='170px'
+            fontSize={{
+              xl: "17px",
+              lg: "13px",
+              md: "13px",
+              sm: "20px",
+              base: "20px",
+            }}
             area={"river"}
             cursor='pointer'
+            boxSizing='border-box'
+            display='block'
+            overflow='visible'
+            wordBreak='break-word'
             _hover={{
               boxShadow: "0 4px 10px rgba(0,0,0,.05)",
               transition: "box-shadow .15s linear 0s",
@@ -690,9 +709,19 @@ function Main() {
             borderRadius='0.8rem'
             color='white'
             position='relative'
-            fontSize='17px'
+            minW='170px'
+            fontSize={{
+              xl: "17px",
+              lg: "13px",
+              md: "13px",
+              sm: "20px",
+              base: "20px",
+            }}
             area={"evacuated"}
             cursor='pointer'
+            boxSizing='border-box'
+            display='block'
+            overflow='visible'
             _hover={{
               boxShadow: "0 4px 10px rgba(0,0,0,.05)",
               transition: "box-shadow .15s linear 0s",
@@ -700,7 +729,7 @@ function Main() {
             Найти эвакуированный автомобиль
             <Image
               src={EvacuatedAvto}
-              w='50%'
+              w='70%'
               position='absolute'
               bottom='20px'
               right='10px'
@@ -746,7 +775,7 @@ function Main() {
             borderRadius='0.8rem'
             area={"checkTruck"}
             backgroundImage={CargoPass}
-            backgroundPosition='center bottom'
+            backgroundPosition='right bottom'
             backgroundSize='cover'
             fontSize='17px'
             wordBreak='break-word'
@@ -796,7 +825,8 @@ function Main() {
           h='407px'
           gap='24px'
           fontWeight='bold'
-          pb='24px'>
+          pb='24px'
+          mb='40px'>
           <GridItem
             bg='#092360'
             p='18px 20px'
@@ -833,8 +863,13 @@ function Main() {
             color='white'
             area={"fine"}
             backgroundImage={Controller}
-            backgroundPosition='right top'
-            backgroundSize='30%'
+            backgroundPosition='right top -1rem'
+            backgroundSize={{
+              lg: "10rem",
+              md: "7.5rem",
+              sm: "7.5rem",
+              base: "7.5rem",
+            }}
             backgroundRepeat='no-repeat'
             position='relative'
             minH='120px'
@@ -882,7 +917,7 @@ function Main() {
               transition: "box-shadow .15s linear 0s",
             }}
             overflow='revert'>
-            <Box display='flex' overflowX='hidden'>
+            <Box display='flex'>
               <Box w='60%'>
                 <Text fontSize='17px'>Бюро находок</Text>
                 <Text fontSize='16px'>
@@ -891,6 +926,7 @@ function Main() {
               </Box>
 
               <Image
+                overflowX='hidden'
                 src={Bear}
                 position='absolute'
                 h='calc(100% + 1rem)'
@@ -909,6 +945,7 @@ function Main() {
             </Box>
           </GridItem>
         </Grid>
+        <Questions />
       </Box>
     </Container>
   );
