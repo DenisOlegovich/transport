@@ -19,7 +19,7 @@ export const theme = extendBaseTheme({
     Select: defaultTheme.components.Select,
     Menu: defaultTheme.components.Menu,
     Alert: defaultTheme.components.Alert,
-    Input: defaultTheme.components.Input,
+    // Input: defaultTheme.components.Input,
     Form: defaultTheme.components.Form,
     Radio: defaultTheme.components.Radio,
   },
