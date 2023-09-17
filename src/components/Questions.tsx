@@ -9,7 +9,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-function Questions(props: any) {
+const Questions = (props: any) => {
   let questions = [
     {
       title: "Как при вызове такси быть уверенным, что такси — легальное?",
@@ -175,33 +175,32 @@ function Questions(props: any) {
   ];
   return (
     <Box>
-      <Box mb="15px">
-        <Link fontSize="33px" borderBottom="1px dotted rgba(0,0,0,.3)">
+      <Box mb='15px'>
+        <Link fontSize='33px' borderBottom='1px dotted rgba(0,0,0,.3)'>
           Частые вопросы
         </Link>
       </Box>
 
       {questions.map((question) => (
-        <Accordion allowMultiple mb="0.8rem">
+        <Accordion allowMultiple mb='1.5rem'>
           <AccordionItem>
             <AccordionButton>
               <Box
-                as="a"
-                fontSize="22px"
-                textAlign="left"
-                fontWeight="700"
-                borderBottom="1px dotted rgba(0,0,0,.3)"
-              >
+                as='a'
+                fontSize='22px'
+                textAlign='left'
+                fontWeight='700'
+                borderBottom='1px dotted rgba(0,0,0,.3)'>
                 {question.title}
               </Box>
             </AccordionButton>
 
             <AccordionPanel
+              mt='1rem'
               pb={4}
-              fontSize="20px"
-              lineHeight="1.2"
-              fontWeight="500"
-            >
+              fontSize='20px'
+              lineHeight='1.2'
+              fontWeight='500'>
               {question.description}
             </AccordionPanel>
           </AccordionItem>
@@ -209,5 +208,5 @@ function Questions(props: any) {
       ))}
     </Box>
   );
-}
+};
 export default Questions;
