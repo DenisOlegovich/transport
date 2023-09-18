@@ -1,17 +1,15 @@
-import {
-  Box,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Text,
-  Link,
-  GridItem,
-  Image,
-} from "@chakra-ui/react";
-import Validaor from "./Images/Validator.png";
-function Card(props: any) {
+import { Box, Text, Image } from "@chakra-ui/react";
+
+interface CardProps {
+  text: string;
+  description: string;
+  bg: string;
+  color: string;
+  image: string;
+  imageH: string;
+  imageInset: string;
+}
+function Card(props: CardProps) {
   return (
     <Box
       p="18px 20px"
