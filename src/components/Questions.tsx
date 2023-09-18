@@ -179,8 +179,8 @@ const Questions = () => {
         </Link>
       </Box>
 
-      {questions.map((question) => (
-        <Accordion allowMultiple mb='1.5rem'>
+      {questions.map((question, index) => (
+        <Accordion allowMultiple mb='1.5rem' key={index}>
           <AccordionItem>
             <AccordionButton>
               <Box

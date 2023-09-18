@@ -276,7 +276,7 @@ function Main() {
               </Link>
             </Box>
             {news.map((item, index) => (
-              <Box mb='2.4rem'>
+              <Box mb='2.4rem' key={index}>
                 <Text>
                   <Text fontSize='12px' color='#666f78'>
                     {item.date}
