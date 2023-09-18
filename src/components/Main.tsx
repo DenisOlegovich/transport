@@ -43,6 +43,23 @@ import Bear from "./Images/Bear.png";
 import Validator from "./Images/Validator.png";
 import Route from "./Images/Route.png";
 
+const news = [
+  {
+    date: "1 сентября",
+    description:
+      "Мы переведем с автобусов на электробусы маршрут 2, который связывает районы Тушино и Митино",
+  },
+  {
+    date: "1 сентября",
+    description:
+      "С 20:00 8 сентября до 14:00 11 сентября участок Большого Черкасского переулка будет закрыт для проезда",
+  },
+  {
+    date: "1 сентября",
+    description:
+      "Перекрытия в связи с проведением киносъемок в районе Овчинниковской набережной",
+  },
+];
 function Main() {
   // const [isSmallerThan1250] = useMediaQuery("(max-width: 1250px)");
   const options = ["Т", "А", "П", "В"];
@@ -54,24 +71,6 @@ function Main() {
   });
 
   const group = getRootProps();
-
-  const news = [
-    {
-      date: "1 сентября",
-      description:
-        "Мы переведем с автобусов на электробусы маршрут 2, который связывает районы Тушино и Митино",
-    },
-    {
-      date: "1 сентября",
-      description:
-        "С 20:00 8 сентября до 14:00 11 сентября участок Большого Черкасского переулка будет закрыт для проезда",
-    },
-    {
-      date: "1 сентября",
-      description:
-        "Перекрытия в связи с проведением киносъемок в районе Овчинниковской набережной",
-    },
-  ];
 
   return (
     <Container
@@ -124,125 +123,127 @@ function Main() {
             area={"routes"}
             borderRadius='0.8rem'
             transition='box-shadow .15s linear 0s'
-            position='relative'
             backgroundImage={Route}
             backgroundPosition='center bottom 20rem'
-            backgroundSize='50rem'>
-            <Box
-              p='1.8rem 2rem'
-              bg='white'
-              borderBottomRadius='50%'
-              roundedBottom='true'>
-              <FormControl as='fieldset'>
-                <FormLabel as='legend' mb='10px'>
-                  <Link
-                    href='https://transport.mos.ru/mostrans/build_route'
-                    borderBottom='1px solid rgba(0,0,0,.2);'
-                    _before={{
-                      content: '""',
-                      position: "absolute",
-                      left: 0,
-                      bottom: 0,
-                      width: "100%",
-                      height: "2px",
-                    }}>
-                    Построить маршрут
-                  </Link>
-                </FormLabel>
-                <Stack spacing={4} mb='10px'>
-                  <InputGroup>
-                    <InputLeftAddon
-                      children='А'
-                      bg='white'
-                      w='25px'
-                      fontSize='14px'
-                      textAlign='center'
-                      color='#d10f1a'
-                      p='11px 5px 11px 10px'
-                      borderTopLeftRadius='0.5rem'
-                      border='1px solid #ebebeb'
-                      borderRight='none'
-                    />
-                    <Input
-                      type='text'
-                      placeholder='откуда'
-                      pl='10px'
-                      borderTopRightRadius='0.5rem'
-                      border='1px solid #ebebeb'
-                      borderLeft='none'
-                      _placeholder={{ color: "gray" }}
-                      _active={{ border: "transporent", outline: "none" }}
-                      _hover={{ border: "transporent", outline: "none" }}
-                      _focus={{ border: "transporent", outline: "none" }}
-                      w='100%'
-                    />
-                  </InputGroup>
+            backgroundSize='53rem'>
+            <Box position='relative'>
+              <Box
+                p='18px 20px'
+                bg='white'
+                borderBottomRadius='50%'
+                roundedBottom='true'>
+                <FormControl as='fieldset'>
+                  <FormLabel as='legend' mb='10px'>
+                    <Link
+                      href='https://transport.mos.ru/mostrans/build_route'
+                      borderBottom='1px solid rgba(0,0,0,.2);'
+                      _before={{
+                        content: '""',
+                        position: "absolute",
+                        left: 0,
+                        bottom: 0,
+                        width: "100%",
+                        height: "2px",
+                      }}>
+                      Построить маршрут
+                    </Link>
+                  </FormLabel>
+                  <Stack mb='10px'>
+                    <InputGroup>
+                      <InputLeftAddon
+                        children='А'
+                        bg='white'
+                        w='25px'
+                        fontSize='14px'
+                        textAlign='center'
+                        color='#d10f1a'
+                        p='11px 5px 11px 10px'
+                        borderTopLeftRadius='0.5rem'
+                        border='1px solid #ebebeb'
+                        borderRight='none'
+                      />
+                      <Input
+                        type='text'
+                        placeholder='откуда'
+                        pl='10px'
+                        borderTopRightRadius='0.5rem'
+                        border='1px solid #ebebeb'
+                        borderLeft='none'
+                        _placeholder={{ color: "gray" }}
+                        _active={{ border: "transporent", outline: "none" }}
+                        _hover={{ border: "transporent", outline: "none" }}
+                        _focus={{ border: "transporent", outline: "none" }}
+                        w='100%'
+                      />
+                    </InputGroup>
 
-                  <InputGroup>
-                    <InputLeftAddon
-                      children='Б'
-                      bg='white'
-                      w='25px'
-                      fontSize='14px'
-                      textAlign='center'
-                      color='#2f80ed'
-                      p='11px 5px 11px 10px'
-                      borderBottomLeftRadius='0.5rem'
-                      border='1px solid #ebebeb'
-                      borderRight='none'
-                    />
-                    <Input
-                      type='text'
-                      placeholder='куда'
-                      pl='10px'
-                      borderBottomRightRadius='0.5rem'
-                      border='1px solid #ebebeb'
-                      borderLeft='none'
-                      _placeholder={{ color: "gray" }}
-                      _active={{ border: "transporent", outline: "none" }}
-                      _hover={{ border: "transporent", outline: "none" }}
-                      _focus={{ border: "transporent", outline: "none" }}
-                      w='100%'
-                    />
-                  </InputGroup>
-                </Stack>
-                <HStack
-                  {...group}
-                  bg='#dbdbdb'
-                  mb='10px'
-                  justifyContent='space-between'
-                  minH='45px'
-                  borderRadius='0.5rem'>
-                  {options.map((value) => {
-                    const radio = getRadioProps({ value });
-                    return (
-                      <RadioCard key={value} {...radio}>
-                        {value}
-                      </RadioCard>
-                    );
-                  })}
-                </HStack>
-                <Button
-                  bg='#da2032'
-                  w='100%'
-                  p='14px 30px 16px'
-                  borderRadius='0.8rem'
-                  color='white'
-                  fontSize='1rem'
-                  fontWeight='700'>
-                  Построить маршрут
-                </Button>
-              </FormControl>
+                    <InputGroup mt='-11px'>
+                      <InputLeftAddon
+                        children='Б'
+                        bg='white'
+                        w='25px'
+                        fontSize='14px'
+                        textAlign='center'
+                        color='#2f80ed'
+                        p='11px 5px 11px 10px'
+                        borderBottomLeftRadius='0.5rem'
+                        border='1px solid #ebebeb'
+                        borderRight='none'
+                      />
+                      <Input
+                        type='text'
+                        placeholder='куда'
+                        pl='10px'
+                        borderBottomRightRadius='0.5rem'
+                        border='1px solid #ebebeb'
+                        borderLeft='none'
+                        _placeholder={{ color: "gray" }}
+                        _active={{ border: "transporent", outline: "none" }}
+                        _hover={{ border: "transporent", outline: "none" }}
+                        _focus={{ border: "transporent", outline: "none" }}
+                        w='100%'
+                      />
+                    </InputGroup>
+                  </Stack>
+                  <HStack
+                    {...group}
+                    bg='#dbdbdb'
+                    mb='10px'
+                    justifyContent='space-between'
+                    minH='45px'
+                    borderRadius='0.5rem'>
+                    {options.map((value) => {
+                      const radio = getRadioProps({ value });
+                      return (
+                        <RadioCard key={value} {...radio}>
+                          {value}
+                        </RadioCard>
+                      );
+                    })}
+                  </HStack>
+                  <Button
+                    bg='#da2032'
+                    w='100%'
+                    p='14px 30px 16px'
+                    borderRadius='0.8rem'
+                    color='white'
+                    fontSize='0.8rem'
+                    fontWeight='700'>
+                    Построить маршрут
+                  </Button>
+                  <Box
+                    borderBottomLeftRadius='60% 100%'
+                    borderBottomRightRadius='60% 100%'
+                    position='absolute'
+                    bg='white'
+                    w='100%'
+                    content=''
+                    h='1rem'
+                    bottom='-0.9rem'
+                    left='0'></Box>
+                </FormControl>
+              </Box>
             </Box>
-            <Box
-              borderBottomLeftRadius='60% 100%'
-              borderBottomRightRadius='60% 100%'
-              position='absolute'
-              bg='white'
-              w='100%'
-              content=''
-              h='1rem'
-              top='17.5rem'></Box>
           </GridItem>
           <GridItem area={"pay"}>
             <Card
@@ -266,7 +267,6 @@ function Main() {
             }}>
             <Box mb='24px'>
               <Link
-                fontSize='1rem'
                 borderBottom='1px solid rgba(0,0,0,.2);'
                 href=''
                 _hover={{
@@ -282,7 +282,7 @@ function Main() {
                     {item.date}
                   </Text>
                   <Text
-                    fontSize='16px'
+                    fontSize='0.8rem'
                     lineHeight='1.2em'
                     fontWeight='500'
                     maxH='60px'
@@ -316,7 +316,6 @@ function Main() {
             borderRadius='0.8rem'
             p='18px 20px 0px'
             color='white'
-            fontSize='1rem'
             minW='170px'
             cursor='pointer'
             _hover={{
@@ -346,7 +345,6 @@ function Main() {
             color='white'
             area={"record"}
             borderRadius='0.8rem'
-            fontSize='1rem'
             minW='170px'
             cursor='pointer'
             _hover={{
@@ -399,8 +397,8 @@ function Main() {
             p='18px 20px'
             area={"scheme"}
             backgroundImage={MetroMap}
-            backgroundPosition='center -3rem'
-            backgroundSize='90rem'
+            backgroundPosition='center -2rem'
+            backgroundSize='55rem'
             borderRadius='0.8rem'
             cursor='pointer'
             _hover={{
@@ -426,11 +424,11 @@ function Main() {
             Магистраль - новая сеть маршрутов города
           </GridItem>
           <GridItem
-            pl='2'
             area={"traffic"}
             backgroundImage={Probki}
             backgroundPosition='0 0'
-            backgroundSize='66rem'
+            backgroundSize='40rem'
+            backgroundRepeat='no-repeat'
             borderRadius='0.8rem'
             cursor='pointer'
             _hover={{
@@ -439,7 +437,6 @@ function Main() {
             }}>
             <Box position='relative'>
               <Center
-                fontSize='1rem'
                 justifyContent='space-between'
                 bg='white'
                 minH='72px'
@@ -657,18 +654,14 @@ function Main() {
             area={"mapTruck"}
             backgroundImage={CargoMap}
             backgroundPosition='50%'
-            backgroundSize='70rem'
+            backgroundSize='55rem'
             cursor='pointer'
             _hover={{
               boxShadow: "0 4px 10px rgba(0,0,0,.15)",
               transition: "box-shadow .15s linear 0s",
             }}>
             <Box position='relative'>
-              <Center
-                fontSize='1rem'
-                justifyContent='space-between'
-                bg='white'
-                p='18px 20px'>
+              <Center justifyContent='space-between' bg='white' p='18px 20px'>
                 <Text mb='4px'>Карта грузового каркаса</Text>
               </Center>
               <Box
@@ -691,8 +684,8 @@ function Main() {
             minW='170px'
             fontSize={{
               xl: "1rem",
-              lg: "13px",
-              md: "13px",
+              lg: "15px",
+              md: "15px",
               sm: "20px",
               base: "20px",
             }}
@@ -706,7 +699,7 @@ function Main() {
               boxShadow: "0 4px 10px rgba(0,0,0,.15)",
               transition: "box-shadow .15s linear 0s",
             }}>
-            <Text maxW='60%'>Речной транспорт</Text>
+            <Text maxW='80%'>Речной транспорт</Text>
 
             <Image
               src={River}
@@ -726,9 +719,9 @@ function Main() {
             position='relative'
             minW='170px'
             fontSize={{
-              xl: "1rem",
-              lg: "13px",
-              md: "13px",
+              xl: "0.85rem",
+              lg: "15px",
+              md: "15px",
               sm: "20px",
               base: "20px",
             }}
@@ -752,13 +745,12 @@ function Main() {
             />
           </GridItem>
           <GridItem
-            pl='2'
             bg='white'
             borderRadius='0.8rem'
             area={"energy"}
             backgroundImage={ElectroAvtoMap}
             backgroundPosition='50%'
-            backgroundSize='80rem'
+            backgroundSize='30rem'
             cursor='pointer'
             _hover={{
               boxShadow: "0 4px 10px rgba(0,0,0,.15)",
@@ -766,7 +758,6 @@ function Main() {
             }}>
             <Box position='relative'>
               <Center
-                fontSize='1rem'
                 justifyContent='space-between'
                 bg='white'
                 minH='72px'
@@ -792,7 +783,6 @@ function Main() {
             backgroundImage={CargoPass}
             backgroundPosition='right bottom'
             backgroundSize='cover'
-            fontSize='1rem'
             wordBreak='break-word'
             cursor='pointer'
             _hover={{
@@ -850,10 +840,10 @@ function Main() {
             backgroundImage={AppsIllustration}
             backgroundPosition='center bottom'
             backgroundSize={{
-              lg: "35rem",
-              md: "20rem",
-              sm: "25rem",
-              base: "25rem",
+              lg: "30rem",
+              md: "23rem",
+              sm: "23rem",
+              base: "20rem",
             }}
             backgroundRepeat='no-repeat'
             cursor='pointer'
@@ -861,10 +851,8 @@ function Main() {
               boxShadow: "0 4px 10px rgba(0,0,0,.15)",
               transition: "box-shadow .15s linear 0s",
             }}>
-            <Text fontSize='1rem' fontWeight='700'>
-              Мобильные приложения
-            </Text>
-            <Text fontSize='16px' fontWeight='500'>
+            <Text fontWeight='700'>Мобильные приложения</Text>
+            <Text fontSize='0.8rem' fontWeight='500'>
               Расписания транспорта, оплата парковки, вызов такси на расстоянии
               одного клика
             </Text>
@@ -941,8 +929,8 @@ function Main() {
             />
             <Box display='flex' position='relative' zIndex='1'>
               <Box maxW='60%' mr='120px'>
-                <Text fontSize='1rem'>Бюро находок</Text>
-                <Text fontSize='16px'>
+                <Text>Бюро находок</Text>
+                <Text fontSize='0.8rem'>
                   Что делать, если забыли вещи в транспорте
                 </Text>
               </Box>
