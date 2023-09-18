@@ -974,7 +974,15 @@ function Main() {
             }}
             overflow="revert"
           >
-            <Box display="flex">
+            <Image
+              overflowX="hidden"
+              src={Bear}
+              position="absolute"
+              h="calc(100% + 1rem)"
+              bottom="0px"
+              right="0rem"
+            />
+            <Box display="flex" position="relative" zIndex="1">
               <Box maxW="60%" mr="120px">
                 <Text fontSize="1rem">Бюро находок</Text>
                 <Text fontSize="16px">
@@ -982,23 +990,16 @@ function Main() {
                 </Text>
               </Box>
 
-              <Image
-                overflowX="hidden"
-                src={Bear}
+              {/* <Box
+                backgroundImage={Bear}
+                backgroundPosition="cover"
+                backgroundSize="30%"
+                backgroundRepeat="no-repeat"
                 position="absolute"
                 h="calc(100% + 1rem)"
                 bottom="0px"
-                right="0rem"
-              />
-
-              {/* <Box
-                backgroundImage={Bear}
-                backgroundPosition='cover'
-                backgroundSize='30%'
-                backgroundRepeat='no-repeat'
-                h='100%'
-                w='100%'
-                display='block'></Box> */}
+                right="0px"
+              ></Box> */}
             </Box>
           </GridItem>
         </Grid>
