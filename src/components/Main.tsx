@@ -73,14 +73,7 @@ function Main() {
   const group = getRootProps();
 
   return (
-    <Container
-      bg="#f3f5f7"
-      fontFamily="Moscow Sans,Arial,sans-serif"
-      fontSize="1rem"
-      fontWeight="600"
-      lineHeight="1.2"
-      h="100%"
-    >
+    <Container bg="#f3f5f7" fontSize="1rem" fontWeight="600" h="100%">
       <Box maxW="1630px" p={{ md: "30px 40px", base: "30px 15px" }} m="0 auto">
         <Grid
           templateAreas={{
@@ -896,7 +889,7 @@ function Main() {
             }}
           >
             <Text fontWeight="700">Мобильные приложения</Text>
-            <Text fontSize="0.9rem" fontWeight="600">
+            <Text fontSize="0.8rem" fontWeight="600">
               Расписания транспорта, оплата парковки, вызов такси на расстоянии
               одного клика
             </Text>
@@ -957,7 +950,7 @@ function Main() {
                 Какие права имеют владельцы резидентных разрешений?
               </Link>
             </Box>
-            <Box>
+            <Box mb="0.8rem">
               <Link
                 textDecorationLine="underline"
                 textDecorationStyle="solid"
@@ -997,7 +990,7 @@ function Main() {
             <Box display="flex" position="relative" zIndex="1">
               <Box maxW="60%" mr="120px">
                 <Text>Бюро находок</Text>
-                <Text fontSize="0.9rem">
+                <Text fontSize="0.8rem">
                   Что делать, если забыли вещи в транспорте
                 </Text>
               </Box>
