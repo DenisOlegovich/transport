@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/transport/static/js/main.41a82a9b.js",
+    "main.js": "/transport/static/js/main.b37905c3.js",
     "static/js/787.d871f8c6.chunk.js": "/transport/static/js/787.d871f8c6.chunk.js",
     "static/media/Probki.jpg": "/transport/static/media/Probki.b254158137a0dbc344ad.jpg",
     "static/media/CargoMap.jpg": "/transport/static/media/CargoMap.95668329547d66bfb5c7.jpg",
@@ -23,10 +23,10 @@
     "static/media/CoddLogo.svg": "/transport/static/media/CoddLogo.3897f6061000849cc92e908676fa5233.svg",
     "index.html": "/transport/index.html",
     "static/media/MetroLogo.svg": "/transport/static/media/MetroLogo.82776b0ec630030ba04bd67aa3ba0d1d.svg",
-    "main.41a82a9b.js.map": "/transport/static/js/main.41a82a9b.js.map",
+    "main.b37905c3.js.map": "/transport/static/js/main.b37905c3.js.map",
     "787.d871f8c6.chunk.js.map": "/transport/static/js/787.d871f8c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.41a82a9b.js"
+    "static/js/main.b37905c3.js"
   ]
 }
