@@ -354,14 +354,6 @@ function Main() {
             >
               Колонка Максима <br /> Ликсутова
             </Box>
-
-            {/* <Image
-              src={MaxLiksutov}
-              position='absolute'
-              h='80%'
-              bottom='0px'
-              right='0px'
-            /> */}
           </GridItem>
           <GridItem
             bg="#E4000D"
@@ -377,15 +369,6 @@ function Main() {
             }}
           >
             Запись для получения спецразрешения
-            {/* <Card
-              text="Запись для получения спецразрешения"
-              description=""
-              bg="#E4000D"
-              color="white"
-              image=""
-              imageH=""
-              imageInset=""
-            /> */}
           </GridItem>
         </Grid>
         <Grid
@@ -938,14 +921,6 @@ function Main() {
             }}
           >
             <Text w="60%">Штрафы в городском транспорте</Text>
-            {/* <Image
-              src={Controller}
-              position="absolute"
-              bgSize="50%"
-              h=""
-              right="0"
-              bottom="0"
-            /> */}
           </GridItem>
           <GridItem borderRadius="0.8rem" area={"text"}>
             <Box mb="0.8rem">
@@ -1023,17 +998,6 @@ function Main() {
                   </Text>
                 </Box>
               </Box>
-
-              {/* <Box
-                backgroundImage={Bear}
-                backgroundPosition="cover"
-                backgroundSize="30%"
-                backgroundRepeat="no-repeat"
-                position="absolute"
-                h="calc(100% + 1rem)"
-                bottom="0px"
-                right="0px"
-              ></Box> */}
             </Box>
           </GridItem>
         </Grid>
