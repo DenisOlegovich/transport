@@ -43,7 +43,7 @@ import Bear from "./Images/Bear.png";
 import Validator from "./Images/Validator.png";
 import Route from "./Images/Route.png";
 
-const news = [
+const news: { date: string; description: string }[] = [
   {
     date: "1 сентября",
     description:
@@ -61,8 +61,7 @@ const news = [
   },
 ];
 function Main() {
-  // const [isSmallerThan1250] = useMediaQuery("(max-width: 1250px)");
-  const options = ["Т", "А", "П", "В"];
+  const options: string[] = ["Т", "А", "П", "В"];
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "route",
@@ -727,7 +726,7 @@ function Main() {
             <Text
               maxW={{
                 sm: "80%",
-                base: "60%",
+                base: "55%",
               }}
             >
               Речной транспорт
@@ -888,11 +887,17 @@ function Main() {
               transition: "box-shadow .15s linear 0s",
             }}
           >
-            <Text fontWeight="700">Мобильные приложения</Text>
-            <Text fontSize="0.8rem" fontWeight="600">
-              Расписания транспорта, оплата парковки, вызов такси на расстоянии
-              одного клика
-            </Text>
+            <Box>
+              <Text fontWeight="700" mb="0.2rem">
+                Мобильные приложения
+              </Text>
+            </Box>
+            <Box>
+              <Text fontSize="0.8rem" fontWeight="600">
+                Расписания транспорта, оплата парковки, вызов такси на
+                расстоянии одного клика
+              </Text>
+            </Box>
           </GridItem>
           <GridItem
             bg="#a2a9b1"
@@ -989,10 +994,19 @@ function Main() {
             />
             <Box display="flex" position="relative" zIndex="1">
               <Box maxW="60%" mr="120px">
-                <Text>Бюро находок</Text>
-                <Text fontSize="0.8rem">
-                  Что делать, если забыли вещи в транспорте
-                </Text>
+                <Box mb="0.2rem">
+                  <Text>Бюро находок</Text>
+                </Box>
+                <Box>
+                  <Text
+                    fontSize={{
+                      sm: "0.8rem",
+                      base: "0.75rem",
+                    }}
+                  >
+                    Что делать, если забыли вещи в транспорте
+                  </Text>
+                </Box>
               </Box>
 
               {/* <Box

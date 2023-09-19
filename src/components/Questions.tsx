@@ -7,7 +7,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-const questions = [
+const questions: { title: string; description: string }[] = [
   {
     title: "Как при вызове такси быть уверенным, что такси — легальное?",
     description:

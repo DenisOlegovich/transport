@@ -5,7 +5,7 @@ function RadioCard(props: any) {
 
   const input = getInputProps();
   const checkbox = getRadioProps();
-
+  console.log(typeof props.children);
   return (
     <Box as="label">
       <input {...input} />
@@ -14,8 +14,7 @@ function RadioCard(props: any) {
         cursor="pointer"
         borderRadius="0.5rem"
         h="45px"
-        p="10px 25px"
-        display="inline-flex"
+        p="10px 20px"
         _checked={{
           bg: "white",
           boxShadow: "0 4px 10px rgba(0,0,0,.05);",

@@ -26,8 +26,12 @@ function Card(props: CardProps) {
       }}
     >
       <Box maxW="50%">
-        <Text fontWeight="700">{props.text}</Text>
-        <Text fontSize="0.8rem">{props.description}</Text>
+        <Box mb="0.3rem">
+          <Text fontWeight="700">{props.text}</Text>
+        </Box>
+        <Box>
+          <Text fontSize="0.8rem">{props.description}</Text>
+        </Box>
       </Box>
       <Image
         src={props.image}
