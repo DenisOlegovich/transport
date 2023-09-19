@@ -286,10 +286,14 @@ function Main() {
                     {item.date}
                   </Text>
                   <Text
-                    fontSize="0.8rem"
+                    fontSize={{
+                      lg: "0.8rem",
+                      md: "1rem",
+                      sm: "0.8rem",
+                      base: "0.8rem",
+                    }}
                     lineHeight="1.2em"
                     fontWeight="550"
-                    maxH="60px"
                     noOfLines={3}
                   >
                     <Link
