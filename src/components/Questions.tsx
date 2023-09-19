@@ -174,7 +174,13 @@ const Questions = () => {
   return (
     <Box>
       <Box mb="20px">
-        <Link fontSize="1.6rem" borderBottom="1px solid rgba(0,0,0,.3)">
+        <Link
+          fontSize={{
+            sm: "1.6rem",
+            base: "1.3rem",
+          }}
+          borderBottom="1px solid rgba(0,0,0,.3)"
+        >
           Частые вопросы
         </Link>
       </Box>
@@ -185,7 +191,10 @@ const Questions = () => {
             <AccordionButton>
               <Box
                 as="a"
-                fontSize="1.1rem"
+                fontSize={{
+                  sm: "1.1rem",
+                  base: "1rem",
+                }}
                 textAlign="left"
                 fontWeight="700"
                 textDecorationLine="underline"
@@ -198,7 +207,16 @@ const Questions = () => {
               </Box>
             </AccordionButton>
 
-            <AccordionPanel mt="1rem" pb={1} lineHeight="1.2" fontWeight="500">
+            <AccordionPanel
+              fontSize={{
+                sm: "1rem",
+                base: "0.9rem",
+              }}
+              mt="1rem"
+              pb={1}
+              lineHeight="1.2"
+              fontWeight="500"
+            >
               {question.description}
             </AccordionPanel>
           </AccordionItem>
