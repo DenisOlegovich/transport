@@ -173,32 +173,38 @@ const questions = [
 const Questions = () => {
   return (
     <Box>
-      <Box mb='15px'>
-        <Link fontSize='33px' borderBottom='1px dotted rgba(0,0,0,.3)'>
+      <Box mb="20px">
+        <Link fontSize="33px" borderBottom="1px solid rgba(0,0,0,.3)">
           Частые вопросы
         </Link>
       </Box>
 
       {questions.map((question, index) => (
-        <Accordion allowMultiple mb='1.5rem' key={index}>
+        <Accordion allowMultiple mb="1rem" key={index}>
           <AccordionItem>
             <AccordionButton>
               <Box
-                as='a'
-                fontSize='22px'
-                textAlign='left'
-                fontWeight='700'
-                borderBottom='1px dotted rgba(0,0,0,.3)'>
+                as="a"
+                fontSize="22px"
+                textAlign="left"
+                fontWeight="700"
+                textDecorationLine="underline"
+                textDecorationStyle="dotted"
+                textDecorationColor="rgba(0,0,0,.2)"
+                textUnderlineOffset="0.2em"
+                textDecorationThickness="1px"
+              >
                 {question.title}
               </Box>
             </AccordionButton>
 
             <AccordionPanel
-              mt='1rem'
-              pb={4}
-              fontSize='20px'
-              lineHeight='1.2'
-              fontWeight='500'>
+              mt="1rem"
+              pb={1}
+              fontSize="20px"
+              lineHeight="1.2"
+              fontWeight="500"
+            >
               {question.description}
             </AccordionPanel>
           </AccordionItem>

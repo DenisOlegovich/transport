@@ -7,16 +7,16 @@ function RadioCard(props: any) {
   const checkbox = getRadioProps();
 
   return (
-    <Box as='label'>
+    <Box as="label">
       <input {...input} />
       <Center
         {...checkbox}
-        cursor='pointer'
-        borderRadius='0.5rem'
-        h='45px'
-        p='10px 25px'
+        cursor="pointer"
+        borderRadius="0.5rem"
+        h="45px"
+        p="10px 25px"
+        display="inline-flex"
         _checked={{
-          p: " 0 25px",
           bg: "white",
           boxShadow: "0 4px 10px rgba(0,0,0,.05);",
           borderColor: "white",
@@ -24,7 +24,8 @@ function RadioCard(props: any) {
         }}
         _focus={{
           borderColor: "white",
-        }}>
+        }}
+      >
         {props.children}
       </Center>
     </Box>
