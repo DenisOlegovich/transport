@@ -275,6 +275,12 @@ function Main() {
                 _hover={{
                   borderBottom: "1px solid rgba(0,0,0,.5);",
                 }}
+                fontSize={{
+                  lg: "1rem",
+                  md: "1.2rem",
+                  sm: "1rem",
+                  base: "1rem",
+                }}
               >
                 Новости
               </Link>
@@ -292,8 +298,7 @@ function Main() {
                       sm: "0.8rem",
                       base: "0.8rem",
                     }}
-                    lineHeight="1.2em"
-                    fontWeight="550"
+                    fontWeight="600"
                     noOfLines={3}
                   >
                     <Link
@@ -315,6 +320,12 @@ function Main() {
               href=""
               _hover={{
                 borderBottom: "1px solid rgba(0,0,0,.5);",
+              }}
+              fontSize={{
+                lg: "1rem",
+                md: "1.2rem",
+                sm: "1rem",
+                base: "1rem",
               }}
             >
               Все новости
